@@ -58,9 +58,6 @@ fn main() -> Result<()> {
     if cfg!(not(target_pointer_width = "64")) {
         bail!("only 64-bit targets are supported");
     }
-    if cfg!(not(target_arch = "x86_64")) {
-        bail!("only x86_64 is supported");
-    }
 
     let args: Vec<OsString> = env::args_os().collect();
     if args.len() < 2 {
