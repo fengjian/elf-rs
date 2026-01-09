@@ -23,8 +23,6 @@ This makes the loaded program behave like it was executed normally via `execve`,
 - ✅ Works on:
   - `x86_64-unknown-linux-gnu`
   - `aarch64-unknown-linux-gnu`
-- ✅ Optional: disable HTTPS certificate validation (useful for internal testing)
-
 ---
 
 ## How it works (high-level)
@@ -38,6 +36,12 @@ This makes the loaded program behave like it was executed normally via `execve`,
 7. Jump to entry point with a trampoline (`jmp`/`br`) while restoring the original stack pointer
 
 ---
+
+## build
+
+```bash
+cargo build --release
+```
 
 ## Usage
 
@@ -59,10 +63,6 @@ argv[2] = "--verbose"
 
 ```
 
-## build
 
-```bash
-cargo build --release
-```
 
 
